@@ -618,10 +618,7 @@
           var t = e.data,
             r = t.content,
             a = t.location;
-          null !== r && r !== i && o(e.data),
-            a !== c && n(a),
-            (i = r || i),
-            (c = a);
+          null !== r && o(e.data), a !== c && n(a), (i = r || i), (c = a);
         };
         return (
           (function e(r) {

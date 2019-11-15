@@ -35,7 +35,8 @@ export function keepScanning(Worker, camera, options) {
 
     const { content, location } = event.data;
 
-    if (content !== null && content !== contentBefore) {
+    // if (content !== null && content !== contentBefore) {
+    if (content !== null) {
       detectHandler(event.data);
     }
 

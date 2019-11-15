@@ -55,6 +55,11 @@ export default {
     worker: {
       type: Function,
       default: Worker
+    },
+
+    device: {
+      type: String,
+      default: ""
     }
   },
 
@@ -168,7 +173,11 @@ export default {
       if (this.constraints === undefined) {
         this.cameraInstance = null;
       } else {
-        this.cameraInstance = await Camera(this.constraints, this.$refs.video);
+        this.cameraInstance = await Camera(
+          this.constraints,
+          this.$refs.video,
+          this.device
+        );
 
         // if the component is destroyed before `cameraInstance` resolves a
         // `beforeDestroy` hook has no chance to clear the remaining camera
